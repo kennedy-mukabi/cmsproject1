@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content">
+<div class="page-inner">
+    <div class="card card-stats card-round">
+        <div class="card-header">
+            <div class="card-head-row">
+                <div class="card-title">Files & Folders</div>
+                <div class="card-tools">
+                    <a href="" class="btn btn-info btn-border btn-round btn-sm mr-2">
+                        <span class="btn-label">
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        Add File
+                    </a>            
+                    </a>
+                </div>
+            </div>
+        </div>
+  
+<div style="left: 0; width: 100%; height: 400px; position: relative;"><iframe src="https://drive.google.com/embeddedfolderview?id=1mw-y_yrGIKRYOhAUpEMKsmIGpQWgskX_#grid" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div>
+</div>
+</div>
+
+</div>
+
+ {% endblock content %}
+
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<!-- Atlantis DEMO methods, don't include it in your project! -->
+<script src="/static/assets/js/setting-demo2.js"></script>
+
+{% endblock javascripts %}

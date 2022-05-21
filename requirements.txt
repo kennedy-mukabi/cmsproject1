@@ -1,0 +1,17 @@
+flask
+gunicorn
+sqlalchemy==1.4.5
+flask_sqlalchemy==2.5.1
+flask_migrate==2.7.0
+requests==2.21.0
+oauthlib==3.0.1
+pyOpenSSL==19.0.0
+Flask-Login==0.4.1
+Werkzeug==2.0.0
+bcrypt
+flask-bcrypt
+image
+flask_wtf
+wtforms==2.2.1
+humanize
+pathlib2

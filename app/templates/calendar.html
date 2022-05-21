@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content">
+<div class="page-inner">
+
+    <div class="card card-stats card-round">
+        <div class="card-header">
+            <div class="card-head-row">
+                <div class="card-title">Files & Folders</div>
+                <div class="card-tools">
+                    <a href="" class="btn btn-info btn-border btn-round btn-sm mr-2">
+                        <span class="btn-label">
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        Add Event
+                    </a>            
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <div class="embed-responsive embed-responsive-1by1">
+    <iframe class="embed-responsive-item" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Africa%2FNairobi&src=M29vNjF1dDUyNGZiYmo2dTJrbzI4dm1iZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4ua2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y2xhc3Nyb29tMTE1NjU1ODM1MTU5NjA5MDgzNjQxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23E67C73&color=%230B8043&color=%23202124" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="yes"></iframe>
+        </div>
+</div>
+</div>
+
+</div>
+
+ {% endblock content %}
+
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<!-- Atlantis DEMO methods, don't include it in your project! -->
+<script src="/static/assets/js/setting-demo2.js"></script>
+
+{% endblock javascripts %}

@@ -1,0 +1,75 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content">
+<div class="page-inner">
+    <div class="card card-stats card-round">
+        <div class="card-header">
+            <div class="card-head-row">
+                <div class="card-title">Public Chat</div>
+                <div class="card-tools">
+                    <a href="{{ url_for('new_post') }}" class="btn btn-info btn-border btn-round btn-sm mr-2">
+                        <span class="btn-label">
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        Post Article
+                    </a>            
+                    </a>
+                </div>
+            </div>
+        </div>
+    <div class="card-body ">
+       
+
+    {% for post in posts.items %}
+    <article class="media content-section">
+        <div class="avatar-sm float-left mr-2">
+        <img class="avatar-img rounded-circle" src="{{url_for('static',filename='profile_pics/' + post.author.image_file)}}">
+        </div>
+        <div class="media-body">
+        <div class="">
+            <a class="" href="{{ url_for('user_posts',username=post.author.username)}}">{{ post.author.username }}</a>
+            <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+        </div>
+        <h4><b><a class="" href="{{ url_for('post',post_id=post.id) }}">{{ post.title }}</a></b></h4>
+        <p class="article-content">{{ post.content }}</p>
+    </article>
+    <div class="separator-solid"></div>   
+{% endfor %}
+
+</div>
+</div>
+{% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+    {% if page_num %}
+        {% if posts.page == page_num %}
+                <a class="btn btn-info mb-4" href="{{ url_for('home',page=page_num)}}">{{ page_num }}</a>
+            {% else %} 
+                <a class="btn btn-outline-info mb-4" href="{{ url_for('home',page=page_num)}}">{{ page_num }}</a>
+        {% endif %}
+        {% else %}   
+        ....
+    {% endif %}
+{% endfor %}
+
+    </div>
+</div>
+
+
+
+
+ {% endblock content %}
+
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<!-- Atlantis DEMO methods, don't include it in your project! -->
+<script src="/static/assets/js/setting-demo2.js"></script>
+
+{% endblock javascripts %}
